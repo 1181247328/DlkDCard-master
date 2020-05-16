@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/dp_10">
+
+        <com.gcssloop.widget.RCRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@color/white"
+            app:clip_background="true"
+            app:round_corner="@dimen/dp_5">
+
+            <ListView
+                android:id="@+id/lv_personal_dilog_context"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:divider="@color/service_bak"
+                android:dividerHeight="@dimen/dp_1"
+                android:scrollbars="none" />
+
+        </com.gcssloop.widget.RCRelativeLayout>
+
+        <com.gcssloop.widget.RCRelativeLayout
+            android:id="@+id/rcrl_personal_dilog_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@drawable/component_click"
+            app:clip_background="true"
+            app:round_corner="@dimen/dp_5">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_10"
+                android:text="取消"
+                android:textColor="@color/route_determine"
+                android:textSize="@dimen/sp_16" />
+
+        </com.gcssloop.widget.RCRelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

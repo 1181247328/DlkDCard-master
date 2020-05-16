@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <!--通用色-->
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="general_one">#DDDDDD</color>
+    <color name="back_my">#F5F5F5</color>
+
+    <!--所有点击通用效果-->
+    <color name="selected_all">#DDDDDD</color>
+    <color name="in">#7fffffff</color>
+
+    <!--RouteDilogFragment-->
+    <color name="route_determine">#0099FF</color>
+
+    <!--main-->
+    <color name="tab_main_text_default">#101010</color>
+    <color name="tab_main_text_icon">#fdd000</color>
+
+    <!--登录-->
+    <color name="login_text">#d1d1d1</color>
+    <color name="login_select">#e8cd56</color>
+
+    <!--lossmanager-->
+    <color name="lossmanager_stock">#ababab</color>
+    <color name="lossmanager_add">#c33232</color>
+
+    <color name="loss_receive">#3b9bfe</color>
+
+    <color name="line">#f3f3f3</color>
+
+    <color name="service_bak">#f5f5f5</color>
+
+    <color name="shop">#50b2e7</color>
+
+    <color name="loss_manager_number">#a6a5a5</color>
+
+    <color name="audit_text">#474747</color>
+
+    <color name="datils_text">#909090</color>
+
+    <color name="name_text">#b0b0b0</color>
+
+    <color name="news_loss">#ef770d</color>
+
+    <color name="release_one">#dcdcdc</color>
+
+    <color name="clock_one">#999999</color>
+
+    <color name="clockin_one">#d2d2d2</color>
+
+    <color name="addstore_one">#bababa</color>
+
+    <color name="house_eight">#333333</color>
+
+    <color name="shop_one">#e6e6e6</color>
+</resources>

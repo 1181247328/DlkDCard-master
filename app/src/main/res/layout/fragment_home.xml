@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tab_main_text_icon"
+    android:fitsSystemWindows="true">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/srl_home_pull"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/tab_main_text_icon"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/dp_10"
+                    android:paddingBottom="@dimen/dp_10"
+                    android:text="首页"
+                    android:textColor="@color/tab_main_text_default"
+                    android:textSize="@dimen/sp_16" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_orders_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/service_bak"
+                    android:visibility="gone">
+
+                    <ProgressBar
+                        android:id="@+id/pb_orders_bar"
+                        style="@android:style/Widget.ProgressBar.Inverse"
+                        android:layout_width="@dimen/dp_20"
+                        android:layout_height="@dimen/dp_20"
+                        android:layout_centerInParent="true"
+                        android:background="@android:color/transparent" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_orders_abnormal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="异常,请刷新~"
+                    android:textColor="@color/house_eight"
+                    android:textSize="@dimen/sp_14"
+                    android:visibility="gone" />
+
+                <android.support.v4.widget.NestedScrollView
+                    android:id="@+id/nsv_home_scroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+                </android.support.v4.widget.NestedScrollView>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

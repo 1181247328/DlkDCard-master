@@ -1,0 +1,123 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+    defaultConfig {
+        applicationId "com.cdqf.cart"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0.0"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        abortOnError false
+        // 防止在发布的时候出现因MissingTranslation导致Build Failed!
+        disable 'MissingTranslation'
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+        exclude 'META-INF/rxjava.properties'
+        exclude 'assets/infowindow_bg.9.png'
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    defaultConfig {
+        ndk {
+            //设置支持的SO库架构（开发者可以根据需要，选择一个或多个平台的so）
+            abiFilters "armeabi", "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
+        }
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:28.0.0-rc01'
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    implementation 'com.contrarywind:Android-PickerView:4.1.6'
+    implementation 'com.github.addappcn:android-pickers:1.0.3'
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    api project(':pullToRefreshlibrary')
+    api project(':pulltorefresh_library')
+    api project(':SimpleAndroidImageCrop')
+    api project(':horizontallistview')
+    api project(':staggeredgridview_library')
+    api project(':bubbleimageview')
+    api project(':ZProgressBar')
+    api project(':imgdots')
+    api project(':switch')
+    api project(':okhttputils')
+    api project(':nicespinner')
+    api project(':RCLayout')
+    api project(':viewpagerindicator_master')
+    api 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    api 'org.sufficientlysecure:html-textview:3.6'
+    api 'com.xw.repo:xedittext:2.0.0'
+    api 'com.youth.banner:banner:1.4.10'
+    api name: 'SMSSDKGUI-2.1.4', ext: 'aar'
+    api name: 'SMSSDK-2.1.4', ext: 'aar'
+    api 'com.haozhang.libary:android-slanted-textview:1.2'
+    api 'me.codeboy.android:align-text-view:2.3.1'
+    api 'com.android.support:recyclerview-v7:28.0.0-rc01'
+    api 'com.github.pinguo-zhouwei:MZBannerView:v2.0.2'
+    api 'com.github.LillteZheng:ViewPagerHelper:v0.9'
+    //    api 'com.viewpagerindicator:library:2.4.1@aar'
+    api 'com.hedgehog.ratingbar:app:1.1.2'
+    api 'com.wrbug:editspinner:1.1.0'
+    api 'com.carson_ho:SearchLayout:1.0.1'
+    testImplementation 'junit:junit:4.12'
+    api 'com.apkfuns.xprogressdialog:xprogressdialog:1.2.0'
+    implementation 'com.github.DingMouRen:LayoutManagerGroup:1e6f4f96eb'
+    api 'com.android.support:multidex:1.0.1'
+    api 'com.squareup.okhttp3:okhttp-urlconnection:3.12.1'
+    api 'com.github.franmontiel:PersistentCookieJar:v0.9.3'
+    implementation 'com.zxy.android:tiny:1.1.0'
+    //    implementation 'com.github.arcadefire:nice-spinner:1.4'
+    implementation 'de.greenrobot:eventbus:3.0.0-beta1'
+    implementation 'com.kelin.scrollablepanel:library:1.2.0'
+    implementation 'com.wanjian:cockroach:0.0.5'
+    implementation 'com.github.addappcn:android-pickers:1.0.3'
+//    //3D地图so及jar
+//    implementation 'com.amap.api:3dmap:latest.integration'
+//    //定位功能
+//    implementation 'com.amap.api:location:latest.integration'
+//    //搜索功能
+//    implementation 'com.amap.api:search:latest.integration'
+    implementation 'com.github.addappcn:android-pickers:1.0.3'
+    implementation 'com.contrarywind:Android-PickerView:4.1.8'
+    implementation 'org.xclcharts:lib:2.4'
+    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.2.3'
+    implementation 'com.mylhyl:circleDialog:3.0.10'
+}
+
+

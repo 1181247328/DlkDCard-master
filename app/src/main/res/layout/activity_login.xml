@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/service_bak"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_10"
+                android:text="登陆"
+                android:textColor="@color/house_eight"
+                android:textSize="@dimen/sp_18" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_10"
+                android:text="门店选择"
+                android:textColor="@color/house_eight"
+                android:textSize="@dimen/sp_18"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0_5"
+            android:background="@color/selected_all" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/service_bak"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dp_50"
+            android:paddingRight="@dimen/dp_50">
+
+            <com.xw.repo.XEditText
+                android:id="@+id/xet_login_account"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:hint="请输入账号"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:singleLine="true"
+                android:textColor="@color/house_eight"
+                android:textColorHint="@color/clock_one"
+                android:digits="0123456789"
+                android:inputType="number"
+                android:textCursorDrawable="@drawable/nickname_cursor"
+                android:textSize="@dimen/sp_18" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0_5"
+                android:background="@color/clock_one" />
+
+            <com.xw.repo.XEditText
+                android:id="@+id/xet_login_word"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:layout_marginTop="@dimen/dp_30"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:hint="请输入密码"
+                android:paddingLeft="@dimen/dp_10"
+                android:inputType="textPassword"
+                android:paddingRight="@dimen/dp_10"
+                android:singleLine="true"
+                android:textCursorDrawable="@drawable/nickname_cursor"
+                android:textColor="@color/house_eight"
+                android:textColorHint="@color/clock_one"
+                android:textSize="@dimen/sp_18" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0_5"
+                android:background="@color/clock_one" />
+
+            <com.gcssloop.widget.RCRelativeLayout
+                android:id="@+id/rcrl_login_enter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_40"
+                android:background="@color/route_determine"
+                app:clip_background="true"
+                app:round_corner="@dimen/dp_24">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:text="登陆"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_18" />
+
+                </LinearLayout>
+
+            </com.gcssloop.widget.RCRelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

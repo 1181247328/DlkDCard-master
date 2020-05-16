@@ -1,0 +1,249 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.cdqf.cart">
+
+    <uses-feature
+        android:name="android.hardware.usb.host"
+        android:required="true" />
+
+    <uses-feature android:name="android.hardware.usb.accessory" />
+
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_SUPERUSER" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.ACCESS_SUPERUSER" />
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
+    <application
+        android:name="com.cdqf.cart_hear.App"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_rounte"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_rounte"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="528e1981ad5d5a60180f89f48ca89dc6"></meta-data>
+
+        <!-- 定位需要的服务 使用2.0的定位需要加上这个 -->
+        <!--<service android:name="com.amap.api.location.APSService" />-->
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remoe" />
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="rnDcWy8Sr4TYSC3HPWGlGnD3LwemHZLe" />
+
+        <meta-data
+            android:name="TencentMapSDK"
+            android:value="M4BBZ-LM764-5T7US-DF5BS-UOVQK-S7BPH" />
+
+        <!-- QQ -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="101570424" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 微信 -->
+        <activity
+            android:name="com.cdqf.cart.wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="wx04b11fc5b93db89d" />
+            </intent-filter>
+        </activity>
+
+        <!-- 微信支付 -->
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="wx04b11fc5b93db89d" />
+            </intent-filter>
+        </activity>
+
+        <!-- 支付宝 -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" />
+
+        <!--相册大图-->
+        <!--探索卡-->
+        <activity
+            android:name="com.cdqf.cart_image.PhotoActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <!--浏览大图-->
+        <activity
+            android:name="com.cdqf.cart_image.PagerActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name="com.cdqf.cart_ble.BleService"
+            android:permission="true" />
+
+        <service
+            android:name="com.cdqf.cart_service.DownloadService"
+            android:permission="true" />
+
+        <service
+            android:name="com.cdqf.cart_service.DownloadDilogService"
+            android:enabled="true">
+            <intent-filter android:priority="1000">
+                <action android:name="com.cdqf.cart.myservice" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name="com.cdqf.cart_service.ServiceReceiver">
+            <intent-filter android:priority="2147483647">
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+
+                <category android:name="ANDROID.INTENT.CATEGORY.LAUNCHER" />
+                <action android:name="servicereceiver" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="com.cdqf.cart_ble.BleBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <!--TODO 记得更新包名-->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.cdqf.cart.dlk_cart"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+
+        <!--本项目活动界面注册-->
+
+        <!-- 主activity (登陆)-->
+        <activity
+            android:name="com.cdqf.cart_activity.LoginActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--轮播图-->
+        <activity
+            android:name="com.cdqf.cart_activity.TabActivity"
+            android:launchMode="singleTask" />
+
+        <!--人证对比-->
+        <activity
+            android:name="com.cdqf.cart_activity.ContrastActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppBaseTheme" />
+
+    </application>
+</manifest>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.cdqf.cart_view.VerticalSwipeRefreshLayout
+        android:id="@+id/srl_plant_pull"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/service_bak"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@color/white"
+                    android:gravity="center_vertical|center"
+                    android:paddingTop="@dimen/dp_8"
+                    android:paddingBottom="@dimen/dp_8"
+                    android:text="百一认证"
+                    android:textColor="@color/house_eight"
+                    android:textSize="@dimen/sp_14" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_tab_return"
+                    android:layout_width="@dimen/dp_40"
+                    android:layout_height="@dimen/dp_40"
+                    android:background="@drawable/component_click">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_18"
+                        android:layout_height="@dimen/dp_17"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/plantscience_return" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_orders_bar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/service_bak"
+                android:visibility="gone">
+
+                <ProgressBar
+                    android:id="@+id/pb_orders_bar"
+                    style="@android:style/Widget.ProgressBar.Inverse"
+                    android:layout_width="@dimen/dp_20"
+                    android:layout_height="@dimen/dp_20"
+                    android:layout_centerInParent="true"
+                    android:background="@android:color/transparent" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_orders_abnormal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="异常,请下拉刷新~"
+                android:textColor="@color/house_eight"
+                android:textSize="@dimen/sp_14"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/ll_tab_banner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/service_bak"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/service_bak">
+
+                    <com.zhouwei.mzbanner.MZBannerView
+                        android:id="@+id/mbv_tab_banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:background="@color/white"
+                        app:canLoop="true"
+                        app:indicatorAlign="center"
+                        app:middle_page_cover="false"
+                        app:indicatorPaddingLeft="@dimen/dp_10"
+                        app:open_mz_mode="false" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </com.cdqf.cart_view.VerticalSwipeRefreshLayout>
+
+</LinearLayout>

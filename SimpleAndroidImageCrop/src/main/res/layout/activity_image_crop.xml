@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#000000"
+                android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <tech.gaolinfeng.imagecrop.lib.CropImageView
+            android:id="@+id/crop_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#000000"
+            android:scaleType="centerInside"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="#26FFFFFF"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/crop_image_cancel"
+                android:layout_width="wrap_content"
+                android:background="@android:color/transparent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_seabed_shelves_return"
+                    android:layout_width="30dp"
+                    android:layout_height="15dp"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitEnd"
+                    android:src="@mipmap/seabed_shopping_return"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/iv_seabed_shelves_return"
+                    android:gravity="right"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="10dp"
+                    android:text="取消"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/crop_image_ok"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_alignParentRight="true"
+                android:background="@android:color/transparent"
+                android:gravity="right|center_vertical"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="15dp"
+                android:text="确定"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

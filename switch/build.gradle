@@ -1,0 +1,30 @@
+apply plugin: 'com.android.library'
+//apply plugin: 'com.github.dcendents.android-maven'
+//apply plugin: 'com.jfrog.bintray'
+
+def siteUrl = 'https://github.com/ifynn/Switch'
+def gitUrl = 'https://github.com/ifynn/Switch.git'
+group = "com.fynn.switcher"
+version = "1.0.2"
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 28
+        versionCode 20161225
+        versionName "1.0.2"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+}
+
+dependencies {
+    implementation 'com.android.support:support-annotations:28.0.0-rc01'
+}
+

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/RCLayout" />
+            <option value="$PROJECT_DIR$/SimpleAndroidImageCrop" />
+            <option value="$PROJECT_DIR$/ZProgressBar" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/bubbleimageview" />
+            <option value="$PROJECT_DIR$/horizontallistview" />
+            <option value="$PROJECT_DIR$/imgdots" />
+            <option value="$PROJECT_DIR$/nicespinner" />
+            <option value="$PROJECT_DIR$/okhttputils" />
+            <option value="$PROJECT_DIR$/pullToRefreshlibrary" />
+            <option value="$PROJECT_DIR$/pulltorefresh_library" />
+            <option value="$PROJECT_DIR$/staggeredgridview_library" />
+            <option value="$PROJECT_DIR$/switch" />
+            <option value="$PROJECT_DIR$/viewpagerindicator_master" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

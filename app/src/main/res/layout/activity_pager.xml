@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@color/black"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_page_return"
+            android:background="@color/black"
+            android:layout_width="wrap_content"
+            android:paddingLeft="6dp"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:id="@+id/iv_page_return"
+                android:layout_width="18dp"
+                android:src="@mipmap/seabed_shopping_return"
+                android:layout_centerVertical="true"
+                android:background="@color/black"
+                android:layout_height="18dp" />
+
+            <TextView
+                android:text="返回"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:layout_toRightOf="@id/iv_page_return"
+                android:layout_width="wrap_content"
+                android:paddingLeft="3dp"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
